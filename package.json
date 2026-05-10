@@ -1,0 +1,16 @@
+{
+  "name": "distributed-ecom-system",
+  "version": "1.0.0",
+  "description": "Full-stack distributed e-commerce with gRPC cache, Razorpay, Socket.IO",
+  "private": true,
+  "scripts": {
+    "install:all": "npm i --prefix backend && npm i --prefix frontend/my_ecom",
+    "seed": "node backend/seed.js",
+    "cache:1": "CACHE_NODE_PORT=50052 node backend/node/cacheNode.js",
+    "cache:2": "CACHE_NODE_PORT=50053 node backend/node/cacheNode.js",
+    "cache:3": "CACHE_NODE_PORT=50054 node backend/node/cacheNode.js",
+    "gateway": "node backend/gateway/gateway.js",
+    "frontend": "npm --prefix frontend/my_ecom run dev",
+    "docker": "docker-compose -f backend/docker-compose.yml up --build"
+  }
+}

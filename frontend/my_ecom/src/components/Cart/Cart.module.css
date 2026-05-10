@@ -1,0 +1,170 @@
+.page { max-width: 1280px; margin: 0 auto; padding: 40px 24px; }
+
+.empty {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-height: 60vh; gap: 16px; text-align: center;
+}
+.emptyIcon { font-size: 4rem; }
+.empty h2 { font-size: 1.5rem; font-weight: 700; }
+.empty p { color: var(--text-muted); }
+.shopBtn {
+  padding: 12px 28px;
+  background: var(--accent);
+  color: white; border: none; border-radius: var(--radius-sm);
+  font-weight: 600; font-size: 0.95rem; margin-top: 8px; transition: background 0.2s;
+}
+.shopBtn:hover { background: var(--accent-hover); }
+
+/* Stepper */
+.stepper {
+  display: flex; align-items: center;
+  max-width: 400px; margin: 0 auto 40px;
+}
+.step { display: flex; align-items: center; gap: 8px; }
+.stepNum {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--bg-elevated); border: 2px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem; font-weight: 700; color: var(--text-dim);
+  transition: all 0.3s;
+}
+.stepActive .stepNum { background: var(--accent); border-color: var(--accent); color: white; }
+.stepLabel { font-size: 0.85rem; font-weight: 500; color: var(--text-dim); }
+.stepActive .stepLabel { color: var(--text); }
+.stepLine { flex: 1; height: 2px; background: var(--border); margin: 0 12px; transition: background 0.3s; }
+.stepLineActive { background: var(--accent); }
+
+.inner { display: grid; grid-template-columns: 1fr 360px; gap: 32px; align-items: start; }
+@media (max-width: 900px) { .inner { grid-template-columns: 1fr; } }
+
+.cartSection {}
+
+.itemsList { display: flex; flex-direction: column; gap: 12px; }
+
+.item {
+  display: flex; align-items: center; gap: 16px;
+  padding: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.itemImg {
+  width: 72px; height: 72px; border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+  overflow: hidden; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+}
+.itemImg img { width: 100%; height: 100%; object-fit: cover; }
+.itemInfo { flex: 1; min-width: 0; }
+.itemName { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.itemPrice { font-size: 0.8rem; color: var(--text-muted); }
+
+.itemQty {
+  display: flex; align-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm); overflow: hidden;
+}
+.itemQty button {
+  width: 30px; height: 32px;
+  background: var(--bg-elevated); border: none; color: var(--text);
+  font-size: 1rem; transition: background 0.15s;
+}
+.itemQty button:hover { background: var(--border-light); }
+.itemQty span { width: 36px; text-align: center; font-size: 0.9rem; font-weight: 600; }
+
+.itemTotal { font-weight: 700; font-size: 0.95rem; color: var(--accent-hover); min-width: 80px; text-align: right; }
+
+.removeBtn {
+  background: none; border: none; color: var(--text-dim); font-size: 0.9rem;
+  padding: 4px; transition: color 0.15s;
+}
+.removeBtn:hover { color: var(--error); }
+
+/* Shipping Form */
+.shippingForm { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; }
+.formTitle { font-size: 1.25rem; font-weight: 700; margin-bottom: 24px; }
+.formGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.formGroup { display: flex; flex-direction: column; gap: 6px; }
+.formLabel { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+.formInput {
+  padding: 10px 14px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text); font-size: 0.9rem;
+  transition: border-color 0.2s;
+}
+.formInput:focus { border-color: var(--accent); }
+
+.formActions { display: flex; gap: 12px; margin-top: 24px; }
+.btnBack {
+  padding: 12px 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm); background: none;
+  color: var(--text-muted); font-size: 0.9rem; transition: all 0.2s;
+}
+.btnBack:hover { border-color: var(--border-light); color: var(--text); }
+.btnNext {
+  flex: 1; padding: 12px 24px;
+  background: var(--accent); color: white; border: none;
+  border-radius: var(--radius-sm); font-weight: 600; font-size: 0.95rem; transition: background 0.2s;
+}
+.btnNext:hover { background: var(--accent-hover); }
+
+/* Payment */
+.paymentSection { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; }
+.addressReview {
+  background: var(--bg-elevated); border-radius: var(--radius-sm);
+  padding: 16px; margin-bottom: 20px;
+}
+.addressReview h4 { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px; }
+.addressReview p { font-size: 0.9rem; color: var(--text); line-height: 1.7; }
+
+.orderItems { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+.reviewItem {
+  display: flex; justify-content: space-between;
+  font-size: 0.875rem; color: var(--text-muted); padding: 4px 0;
+}
+
+.razorpayBadge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.75rem; color: var(--text-dim);
+  margin-bottom: 24px;
+}
+
+.btnPay {
+  flex: 1; padding: 14px 24px;
+  background: linear-gradient(135deg, #6366f1, #818cf8);
+  color: white; border: none; border-radius: var(--radius-sm);
+  font-weight: 700; font-size: 1rem;
+  transition: all 0.2s; letter-spacing: 0.01em;
+}
+.btnPay:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(99,102,241,0.4); }
+.btnPay:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* Summary */
+.summary {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 24px;
+  position: sticky; top: 88px;
+}
+.summaryTitle { font-size: 1rem; font-weight: 700; margin-bottom: 20px; }
+.summaryRows { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+.summaryRow { display: flex; justify-content: space-between; font-size: 0.875rem; color: var(--text-muted); }
+.summaryTotal {
+  font-weight: 700; font-size: 1rem;
+  color: var(--text);
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+.btnCheckout {
+  width: 100%;
+  padding: 14px;
+  background: var(--accent); color: white; border: none;
+  border-radius: var(--radius-sm); font-weight: 600; font-size: 0.95rem;
+  transition: background 0.2s;
+}
+.btnCheckout:hover { background: var(--accent-hover); }
+
+.shippingNote { font-size: 0.75rem; color: var(--text-dim); text-align: center; margin-top: 12px; }

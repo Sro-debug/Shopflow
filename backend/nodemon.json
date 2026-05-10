@@ -1,0 +1,8 @@
+{
+  "watch": ["gateway", "auth", "payment", "websocket", "hashing"],
+  "ext": "js,json",
+  "ignore": ["node_modules", "*.test.js"],
+  "env": {
+    "NODE_ENV": "development"
+  }
+}

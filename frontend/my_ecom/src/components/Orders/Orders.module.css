@@ -1,0 +1,61 @@
+.page { max-width: 800px; margin: 0 auto; padding: 40px 24px; }
+
+.title { font-size: 2rem; font-weight: 800; margin-bottom: 32px; letter-spacing: -0.02em; }
+
+.list { display: flex; flex-direction: column; gap: 16px; }
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: block;
+  transition: all 0.2s;
+}
+.card:hover { border-color: var(--border-light); transform: translateY(-2px); box-shadow: var(--shadow); }
+
+.cardHeader { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+
+.orderId { font-family: var(--font-display); font-weight: 700; font-size: 1rem; margin-right: 12px; }
+.date { font-size: 0.8rem; color: var(--text-muted); }
+
+.status {
+  padding: 4px 12px; border-radius: 100px;
+  font-size: 0.75rem; font-weight: 700;
+  text-transform: capitalize; letter-spacing: 0.05em;
+}
+
+.items { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
+
+.itemThumb {
+  width: 48px; height: 48px; border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+  overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+}
+.itemThumb img { width: 100%; height: 100%; object-fit: cover; }
+
+.moreItems { font-size: 0.8rem; color: var(--text-muted); padding: 0 4px; }
+
+.cardFooter { display: flex; align-items: center; gap: 16px; padding-top: 16px; border-top: 1px solid var(--border); }
+
+.itemCount { font-size: 0.875rem; color: var(--text-muted); flex: 1; }
+
+.total { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; color: var(--accent-hover); }
+
+.paid { font-size: 0.8rem; font-weight: 600; padding: 3px 10px; border-radius: 100px; }
+.paidYes { color: var(--success); background: rgba(34,197,94,0.1); }
+.paidNo { color: var(--error); background: rgba(239,68,68,0.1); }
+
+.empty {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; min-height: 60vh; gap: 16px; text-align: center;
+}
+.empty span { font-size: 4rem; }
+.empty h2 { font-size: 1.5rem; font-weight: 700; }
+.shopLink { color: var(--accent); font-weight: 600; }
+.shopLink:hover { color: var(--accent-hover); }
+
+.skeletons { display: flex; flex-direction: column; gap: 16px; }
+.skeleton { height: 140px; background: var(--bg-card); border-radius: var(--radius); animation: pulse 1.5s infinite; }
